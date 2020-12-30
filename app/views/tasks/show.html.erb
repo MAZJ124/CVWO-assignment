@@ -1,0 +1,18 @@
+<h1><%= @task.title %></h1>
+
+<p><%= @task.body %></p>
+
+<p>
+    Category:
+    <%= @task.tag %>
+    <br>
+    Deadline:
+    <%= @task.ddl %>
+</p>
+
+<ul>
+    <li><%= link_to "Edit task", edit_task_path(@task) %></li>
+    <li><%= link_to "Delete task", task_path(@task), method: :delete, data: { confirm: "Are you sure about deleting this task?" } %></li>
+</ul>
+
+<%= link_to "home", root_path %>
